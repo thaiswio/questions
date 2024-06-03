@@ -21,3 +21,29 @@ noBtn.addEventListener("mouseover", () => {
   noBtn.style.left = randomX + "px";
   noBtn.style.top = randomY + "px";
 });
+
+const btnYes = document.getElementById('btnYes');
+const btnNo = document.getElementById('btnNo');
+
+btnYes.addEventListener('click', () => {
+  btnYes.style.display = 'none';
+  btnNo.style.display = 'none';
+});
+
+btnNo.addEventListener('click', () => {
+  const width = window.innerWidth - btnNo.offsetWidth;
+  const height = window.innerHeight - btnNo.offsetHeight;
+  const newLeft = Math.floor(Math.random() * width);
+  const newTop = Math.floor(Math.random() * height);
+
+  btnNo.style.left = newLeft + 'px';
+  btnNo.style.top = newTop + 'px';
+});
+
+btnNo.addEventListener('mousemove', () => {
+  btnNo.style.cursor = 'not-allowed';
+});
+
+btnNo.addEventListener('mouseout', () => {
+  btnNo.style.cursor = 'default';
+});
