@@ -46,3 +46,12 @@ button:nth-child(2) {
     background: white;
     color: #e94d58;
 }
+{
+  font-family: "Tilt Warp", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
