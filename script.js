@@ -6,8 +6,7 @@ const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
   question.innerHTML = "Mim aguarde.";
-  gif.src =
-    "https://i.pinimg.com/originals/c8/8a/c7/c88ac78ed012b6b98b634297c58c8c8f.gif";
+  gif.src = "https://i.pinimg.com/originals/c8/8a/c7/c88ac78ed012b6b98b634297c58c8c8f.gif";
 });
 
 noBtn.addEventListener("mouseover", () => {
@@ -22,28 +21,26 @@ noBtn.addEventListener("mouseover", () => {
   noBtn.style.top = randomY + "px";
 });
 
-const btnYes = document.getElementById('btnYes');
-const btnNo = document.getElementById('btnNo');
-
-btnYes.addEventListener('click', () => {
-  btnYes.style.display = 'none';
-  btnNo.style.display = 'none';
+yesBtn.addEventListener('click', () => {
+  yesBtn.style.display = 'none';
+  noBtn.style.display = 'none';
 });
 
-btnNo.addEventListener('click', () => {
-  const width = window.innerWidth - btnNo.offsetWidth;
-  const height = window.innerHeight - btnNo.offsetHeight;
+noBtn.addEventListener('click', () => {
+  const width = window.innerWidth - noBtn.offsetWidth;
+  const height = window.innerHeight - noBtn.offsetHeight;
   const newLeft = Math.floor(Math.random() * width);
   const newTop = Math.floor(Math.random() * height);
 
-  btnNo.style.left = newLeft + 'px';
-  btnNo.style.top = newTop + 'px';
+  noBtn.style.left = newLeft + 'px';
+  noBtn.style.top = newTop + 'px';
 });
 
-btnNo.addEventListener('mousemove', () => {
-  btnNo.style.cursor = 'not-allowed';
+noBtn.addEventListener('mousemove', () => {
+  noBtn.style.cursor = 'not-allowed';
 });
 
-btnNo.addEventListener('mouseout', () => {
-  btnNo.style.cursor = 'default';
+noBtn.addEventListener('mouseout', () => {
+  noBtn.style.cursor = 'default';
 });
+    
